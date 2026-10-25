@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Private API configuration and local experiment execution
+compute.env
+**/compute.env
+.env.*
+!compute.env.example
+credentials*.json
+outputs/
+**/outputs/
