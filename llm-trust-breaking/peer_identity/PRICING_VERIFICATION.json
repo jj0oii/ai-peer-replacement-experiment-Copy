@@ -1,0 +1,36 @@
+{
+  "checked_at_utc": "2026-10-24T15:26:54.350142+00:00",
+  "source": "Official OpenAI model documentation, standard token rates (not assumed Batch API discounts)",
+  "live_verified": true,
+  "models": [
+    {
+      "model": "gpt-4o-mini",
+      "official_url": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+      "input_per_million_usd": 0.15,
+      "cached_input_per_million_usd": 0.075,
+      "output_per_million_usd": 0.6,
+      "source_sha256": "7b2fed35da7a70db4350631f1d0e8144e93a3e8b8ece56c48ea923a7a512a401",
+      "pricing_excerpt": "Text tokens Per 1M tokens \u2219 Batch API price Input $0.15 Cached input $0.075 Output $0.60 Quick comparison Input Cached input Output GPT-4o $ 2.50 o3-mini $ 1.10 GPT-4o Mini $ 0.15 Modalities Text Input and output Image Input only Audio Not supported Video Not supported Endpoints Live v1/live/sessions Chat Completions v1/chat/completions Responses v1/responses Realtime v1/realtime Realtime translation v1/realtime/translations Realtime transcription v1/realtime/transcription_sessions Assistants v1/assistants Batch v1/batch Fine-tuning v1/fine-tuning Embeddings v1/embeddings Image generation v1/images/generations Videos v1/videos Image edit v1/i"
+    },
+    {
+      "model": "gpt-4.1-mini",
+      "official_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+      "input_per_million_usd": 0.4,
+      "cached_input_per_million_usd": 0.1,
+      "output_per_million_usd": 1.6,
+      "source_sha256": "01ebbc8f3dac14e8ba7bc529bb7692a6c63e7a720277c8fdb210be5b3d60b4cb",
+      "pricing_excerpt": "Text tokens Per 1M tokens \u2219 Batch API price Input $0.40 Cached input $0.10 Output $1.60 Quick comparison Input Cached input Output GPT-4.1 Mini $ 0.40 GPT-5 Mini $ 0.25 GPT-4o Mini $ 0.15 Modalities Text Input and output Image Input only Audio Not supported Video Not supported Endpoints Live v1/live/sessions Chat Completions v1/chat/completions Responses v1/responses Realtime v1/realtime Realtime translation v1/realtime/translations Realtime transcription v1/realtime/transcription_sessions Assistants v1/assistants Batch v1/batch Fine-tuning v1/fine-tuning Embeddings v1/embeddings Image generation v1/images/generations Videos v1/videos Image e"
+    },
+    {
+      "model": "gpt-5-mini",
+      "official_url": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+      "input_per_million_usd": 0.25,
+      "cached_input_per_million_usd": 0.025,
+      "output_per_million_usd": 2.0,
+      "source_sha256": "a2a8cae7a1b20edafd0eefce84a352923928f9f12357fd7b84ed7cde274544e0",
+      "pricing_excerpt": "Text tokens Per 1M tokens \u2219 Batch API price Input $0.25 Cached input $0.025 Output $2.00 Quick comparison Input Cached input Output GPT-5.4 Mini $ 0.75 GPT-5 Mini $ 0.25 GPT-5.4 nano $ 0.20 Modalities Text Input and output Image Input only Audio Not supported Video Not supported Endpoints Live v1/live/sessions Chat Completions v1/chat/completions Responses v1/responses Realtime v1/realtime Realtime translation v1/realtime/translations Realtime transcription v1/realtime/transcription_sessions Assistants v1/assistants Batch v1/batch Fine-tuning v1/fine-tuning Embeddings v1/embeddings Image generation v1/images/generations Videos v1/videos Image"
+    }
+  ],
+  "configured_output_limit_tokens": 2000,
+  "note": "Main pricing landing page returned 403; all three official model documentation pages were retrieved successfully. Configured limit is unchanged and includes reasoning output where applicable."
+}

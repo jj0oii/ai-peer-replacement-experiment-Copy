@@ -1,0 +1,267 @@
+{
+  "status": "STOPPED_HTTP_429",
+  "completed_rounds": 0,
+  "completed_trials": 0,
+  "new_requests": 8,
+  "new_usage_by_provider": {
+    "Direct OpenAI": {
+      "attempts": 5,
+      "complete": 5,
+      "input_tokens": 13050,
+      "output_tokens": 701,
+      "known_cost_usd": 0.0027919999999999998,
+      "unknown_usage_attempts": 0,
+      "accounted_usd": 0.0027919999999999998
+    },
+    "OpenRouter / Google AI Studio": {
+      "attempts": 3,
+      "complete": 2,
+      "input_tokens": 3187,
+      "output_tokens": 429,
+      "known_cost_usd": 0.0004903,
+      "unknown_usage_attempts": 1,
+      "accounted_usd": 0.0024222000000000002
+    }
+  },
+  "lifetime_trial_usage_by_provider": {
+    "Direct OpenAI": {
+      "attempts": 6,
+      "complete": 6,
+      "input_tokens": 16579,
+      "output_tokens": 791,
+      "known_cost_usd": 0.00337535,
+      "unknown_usage_attempts": 0,
+      "accounted_usd": 0.00337535
+    },
+    "OpenRouter / Google AI Studio": {
+      "attempts": 5,
+      "complete": 3,
+      "input_tokens": 4728,
+      "output_tokens": 513,
+      "known_cost_usd": 0.000678,
+      "unknown_usage_attempts": 2,
+      "accounted_usd": 0.0042867
+    }
+  },
+  "trial_total_attempts": 11,
+  "round6_partial": {
+    "A": {
+      "promise": 2,
+      "actual_contribution": 0,
+      "trust": 6,
+      "reliability": 10,
+      "forecast": 0,
+      "reflection": {
+        "partner_promised_contribution": 0,
+        "partner_actual_contribution": 0,
+        "promise_matched": true,
+        "own_payoff": 5.0,
+        "partner_payoff": 5.0,
+        "assessment": "Agent B decided to contribute 0 tokens to the public pool, which is a notable shift from their previous contributions. While they matched their public statement of contributing 0 tokens, their choice to contribute nothing raises concerns about their cooperative intentions moving forward. Despite this, they still received a fair payout, suggesting they are looking for ways to maximize their personal benefit, potentially at the cost of collaboration. Given these considerations, I would rate their future trustworthiness as a 6, indicating they are somewhat reliable but with reservations. They have shown promise in the past, but this unexpected change in strategy introduces uncertainty.",
+        "score": 6,
+        "promise_reliability_1_10": 10,
+        "predicted_next_partner_contribution": 0
+      },
+      "payoff_reconstructed_from_saved_decisions": 5.0
+    },
+    "B": {
+      "promise": 0,
+      "actual_contribution": 0,
+      "trust": null,
+      "reliability": null,
+      "forecast": null,
+      "reflection": null,
+      "payoff_reconstructed_from_saved_decisions": 5.0
+    }
+  },
+  "original_comparison": [
+    {
+      "condition": "C0",
+      "a_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "a_trust": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "a_reliability": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "b_promises": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "b_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "recognition": "SAME",
+      "confidence": 95
+    },
+    {
+      "condition": "C1",
+      "a_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "a_trust": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "a_reliability": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "b_promises": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "b_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "recognition": "SAME",
+      "confidence": 95
+    },
+    {
+      "condition": "C2",
+      "a_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "a_trust": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "a_reliability": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "b_promises": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "b_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "recognition": "SAME",
+      "confidence": 95
+    },
+    {
+      "condition": "C3",
+      "a_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "a_trust": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "a_reliability": [
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "b_promises": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "b_contributions": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "recognition": "SAME",
+      "confidence": 95
+    }
+  ],
+  "protected_files_unchanged": 5775,
+  "main_results": 96,
+  "main_api_records": 5496,
+  "partial_export": "/workspace/peer-identity-exports/c4-gemini-extension/exports/recovered-snapshot-20261025T164014760579Z",
+  "error": {
+    "model": "google/gemini-2.5-flash-lite",
+    "requested_provider_route": {
+      "only": [
+        "google-ai-studio"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true
+    },
+    "automatic_retry": false,
+    "http_status": 429,
+    "response_disposition": "http_rejected",
+    "provider_acceptance": "unknown",
+    "could_have_incurred_charge": true,
+    "billing_status": "unknown_keep_reservation",
+    "request_identifiers": {
+      "cf-ray": "a502a9714e58eaf5-ORD"
+    },
+    "provider_error": {
+      "code": "429",
+      "message": "Provider returned error",
+      "provider_name": "Google AI Studio"
+    }
+  }
+}

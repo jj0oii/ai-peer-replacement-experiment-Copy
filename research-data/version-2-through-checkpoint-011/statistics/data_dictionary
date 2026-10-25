@@ -1,0 +1,5 @@
+file,meaning
+matched_contrasts.csv,"Treatment minus reference, checkpoint-weighted; ci bounds are conservative pointwise population-mean intervals."
+run_measurements.csv,One row per agent per completed continuation. Partner metrics refer to the other agent; A recognition fields are missing for B.
+condition_measurements.csv,"Condition means over checkpoints, with one average per checkpoint. Exact binomial intervals only where one Bernoulli per checkpoint."
+recognition_review.csv,"Unmodified judgments/evidence plus lexical review flags, not an automated semantic correction."

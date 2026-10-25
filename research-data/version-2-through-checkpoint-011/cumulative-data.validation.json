@@ -1,0 +1,66 @@
+{
+  "valid": true,
+  "validation": "ZIP integrity, XML parsing, and exact worksheet-value readback against CSV inputs",
+  "sheets": {
+    "README": {
+      "rows_including_header": 8,
+      "columns": 2
+    },
+    "rounds": {
+      "rows_including_header": 1081,
+      "columns": 42
+    },
+    "detections": {
+      "rows_including_header": 201,
+      "columns": 15
+    },
+    "trials": {
+      "rows_including_header": 201,
+      "columns": 26
+    },
+    "checkpoints": {
+      "rows_including_header": 26,
+      "columns": 21
+    },
+    "run_metrics": {
+      "rows_including_header": 201,
+      "columns": 19
+    },
+    "metadata": {
+      "rows_including_header": 6992,
+      "columns": 3
+    },
+    "usage_by_model": {
+      "rows_including_header": 7,
+      "columns": 10
+    },
+    "condition_summary": {
+      "rows_including_header": 17,
+      "columns": 23
+    },
+    "recognition_summary": {
+      "rows_including_header": 3,
+      "columns": 7
+    },
+    "forecasts": {
+      "rows_including_header": 9,
+      "columns": 6
+    },
+    "matched_contrasts": {
+      "rows_including_header": 187,
+      "columns": 12
+    },
+    "recognition_review": {
+      "rows_including_header": 97,
+      "columns": 18
+    },
+    "condition_measurements": {
+      "rows_including_header": 249,
+      "columns": 12
+    },
+    "budget_scenarios": {
+      "rows_including_header": 4,
+      "columns": 8
+    }
+  }
+}

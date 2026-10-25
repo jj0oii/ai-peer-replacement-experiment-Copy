@@ -1,0 +1,25 @@
+{
+  "valid": true,
+  "batch_id": "batch_6a74e413f9fd4ecbaaaff12e71c1ef27",
+  "row_counts": {
+    "rounds": 1080,
+    "detections": 200,
+    "trials": 200,
+    "checkpoints": 25,
+    "run_metrics": 200
+  },
+  "incomplete_trials": 104,
+  "checks": [
+    "required fields",
+    "unique IDs",
+    "foreign keys",
+    "all planned conditions",
+    "phase/round bounds",
+    "valid values",
+    "condition ground truth",
+    "request hashes",
+    "journal/state agreement",
+    "payoffs",
+    "usage/cost agreement"
+  ]
+}

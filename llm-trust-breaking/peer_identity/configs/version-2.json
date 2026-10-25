@@ -1,0 +1,37 @@
+{
+  "config": {
+    "checkpoints": 25,
+    "repetitions": 1,
+    "conditions": [
+      "C0",
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "settings": [
+      "natural",
+      "controlled"
+    ],
+    "model_a": "gpt-4o-mini",
+    "model_b": "gpt-4o-mini",
+    "replacement_model": "gpt-4.1-mini",
+    "judge_model": "gpt-5-mini",
+    "seed": 3303,
+    "temperature": 1.0,
+    "controlled_contribution": 3,
+    "cooperation_threshold": 3.0,
+    "trust_threshold": 8,
+    "protocol_version": "publicgoods-peer-identity-v2"
+  },
+  "execution_window": {
+    "checkpoint_start": 0,
+    "checkpoint_count": 2
+  },
+  "batch_requests": 916,
+  "batch_budget_usd": 8,
+  "study_total_budget_usd": 60,
+  "reserve_usd": 10,
+  "prior_spend_usd": 0.4954921,
+  "request_ledger_budget_usd": 49.5045079,
+  "paid_execution_authorized": false
+}

@@ -1,0 +1,107 @@
+{
+  "paid_calls_during_review": 0,
+  "protocol_version": "publicgoods-peer-identity-v2",
+  "completed_checkpoints": 12,
+  "pilot_inclusion": "All completed Version 2 checkpoints count toward the unchanged 25 if protocol remains identical; original V1 does not count.",
+  "observed_v2_paid_usd": 3.5451755,
+  "prior_v1_paid_usd": 0.4854921,
+  "prior_other_spending_allowance_usd": 0.010000000000000009,
+  "cumulative_current_usd": 4.0406676,
+  "cumulative_limit_usd": 60,
+  "reserve_usd": 10,
+  "remaining_spendable_after_reserve_usd": 45.9593324,
+  "remaining_checkpoints": 13,
+  "remaining_continuations": 104,
+  "remaining_planned_requests": 5954,
+  "scenario_totals": [
+    {
+      "scenario": "observed_usage",
+      "current_v2_paid_usd": 3.5451755,
+      "prior_v1_and_allowance_usd": 0.4954921,
+      "remaining_checkpoints_cost_usd": 3.8406067916666666,
+      "cumulative_200_trial_forecast_usd": 7.8812743916666665,
+      "total_with_reserve_usd": 17.881274391666665,
+      "next_five_checkpoint_cost_usd": 1.4771564583333332,
+      "cumulative_after_next_batch_usd": 5.517824058333333
+    },
+    {
+      "scenario": "higher_usage",
+      "current_v2_paid_usd": 3.5451755,
+      "prior_v1_and_allowance_usd": 0.4954921,
+      "remaining_checkpoints_cost_usd": 10.512765683333333,
+      "cumulative_200_trial_forecast_usd": 14.553433283333334,
+      "total_with_reserve_usd": 24.553433283333334,
+      "next_five_checkpoint_cost_usd": 4.043371416666667,
+      "cumulative_after_next_batch_usd": 8.084039016666667
+    },
+    {
+      "scenario": "full_output_stress",
+      "current_v2_paid_usd": 3.5451755,
+      "prior_v1_and_allowance_usd": 0.4954921,
+      "remaining_checkpoints_cost_usd": 38.8232,
+      "cumulative_200_trial_forecast_usd": 42.8638676,
+      "total_with_reserve_usd": 52.8638676,
+      "next_five_checkpoint_cost_usd": 14.931999999999999,
+      "cumulative_after_next_batch_usd": 18.972667599999998
+    }
+  ],
+  "next_batch": {
+    "checkpoint_start": 12,
+    "checkpoint_count": 5,
+    "checkpoint_indices": [
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "continuations": 40,
+    "batch_request_cap": 2290,
+    "proposed_batch_guard_usd": 16,
+    "cumulative_request_cap": 11450,
+    "new_cumulative_request_total_after_batch": 7786,
+    "post_batch_checkpoint_total": 17,
+    "post_batch_trial_total": 136,
+    "pilot_window_000_001_guards_unchanged": "916 requests / $8; proposed new window does not reset pilot guard",
+    "proposed_only": true,
+    "scope": "Only the new five-checkpoint window. No policy file created and no execution authorized."
+  },
+  "pricing_verification": {
+    "checked_at_utc": "2026-10-24T15:26:54.350142+00:00",
+    "source": "Official OpenAI model documentation, standard token rates (not assumed Batch API discounts)",
+    "live_verified": true,
+    "models": [
+      {
+        "model": "gpt-4o-mini",
+        "official_url": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "input_per_million_usd": 0.15,
+        "cached_input_per_million_usd": 0.075,
+        "output_per_million_usd": 0.6,
+        "source_sha256": "7b2fed35da7a70db4350631f1d0e8144e93a3e8b8ece56c48ea923a7a512a401",
+        "pricing_excerpt": "Text tokens Per 1M tokens \u2219 Batch API price Input $0.15 Cached input $0.075 Output $0.60 Quick comparison Input Cached input Output GPT-4o $ 2.50 o3-mini $ 1.10 GPT-4o Mini $ 0.15 Modalities Text Input and output Image Input only Audio Not supported Video Not supported Endpoints Live v1/live/sessions Chat Completions v1/chat/completions Responses v1/responses Realtime v1/realtime Realtime translation v1/realtime/translations Realtime transcription v1/realtime/transcription_sessions Assistants v1/assistants Batch v1/batch Fine-tuning v1/fine-tuning Embeddings v1/embeddings Image generation v1/images/generations Videos v1/videos Image edit v1/i"
+      },
+      {
+        "model": "gpt-4.1-mini",
+        "official_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+        "input_per_million_usd": 0.4,
+        "cached_input_per_million_usd": 0.1,
+        "output_per_million_usd": 1.6,
+        "source_sha256": "01ebbc8f3dac14e8ba7bc529bb7692a6c63e7a720277c8fdb210be5b3d60b4cb",
+        "pricing_excerpt": "Text tokens Per 1M tokens \u2219 Batch API price Input $0.40 Cached input $0.10 Output $1.60 Quick comparison Input Cached input Output GPT-4.1 Mini $ 0.40 GPT-5 Mini $ 0.25 GPT-4o Mini $ 0.15 Modalities Text Input and output Image Input only Audio Not supported Video Not supported Endpoints Live v1/live/sessions Chat Completions v1/chat/completions Responses v1/responses Realtime v1/realtime Realtime translation v1/realtime/translations Realtime transcription v1/realtime/transcription_sessions Assistants v1/assistants Batch v1/batch Fine-tuning v1/fine-tuning Embeddings v1/embeddings Image generation v1/images/generations Videos v1/videos Image e"
+      },
+      {
+        "model": "gpt-5-mini",
+        "official_url": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+        "input_per_million_usd": 0.25,
+        "cached_input_per_million_usd": 0.025,
+        "output_per_million_usd": 2.0,
+        "source_sha256": "a2a8cae7a1b20edafd0eefce84a352923928f9f12357fd7b84ed7cde274544e0",
+        "pricing_excerpt": "Text tokens Per 1M tokens \u2219 Batch API price Input $0.25 Cached input $0.025 Output $2.00 Quick comparison Input Cached input Output GPT-5.4 Mini $ 0.75 GPT-5 Mini $ 0.25 GPT-5.4 nano $ 0.20 Modalities Text Input and output Image Input only Audio Not supported Video Not supported Endpoints Live v1/live/sessions Chat Completions v1/chat/completions Responses v1/responses Realtime v1/realtime Realtime translation v1/realtime/translations Realtime transcription v1/realtime/transcription_sessions Assistants v1/assistants Batch v1/batch Fine-tuning v1/fine-tuning Embeddings v1/embeddings Image generation v1/images/generations Videos v1/videos Image"
+      }
+    ],
+    "configured_output_limit_tokens": 2000,
+    "note": "Main pricing landing page returned 403; all three official model documentation pages were retrieved successfully. Configured limit is unchanged and includes reasoning output where applicable."
+  },
+  "script_sha256": "533be02b0b6b28fb8ed8703dfafe144d3b1e367b3bcd0a93d8397bda7ccd66a8",
+  "limitations": "Scenarios, not confidence bounds. Limited completed-checkpoint sample; cache hit rates, language length, reasoning usage and errors can vary. Higher-usage scenario doubles observed means and floors at observed maxima, uncached, without changing actual 2000-token limits. Stress retains at least 24000 input/2000 output per future call. No reserve consumption, sample reduction or $60 limit increase is approved; local guards are not provider billing ceilings."
+}

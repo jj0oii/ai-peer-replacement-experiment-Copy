@@ -1,0 +1,6 @@
+# Sealed datasets must retain their exact bytes for checksum verification.
+examples/version-2-mock/*.csv -text
+examples/version-2-mock/*.gz -text
+
+# Preserve published compact dataset checksums.
+research-data/** -text

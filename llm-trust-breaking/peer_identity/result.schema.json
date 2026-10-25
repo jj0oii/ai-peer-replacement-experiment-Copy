@@ -1,0 +1,469 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:apart:experiment33:result:v1",
+  "title": "Completed peer-identity continuation, with shared establishment prefix",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "checkpoint_id": {
+      "type": "string"
+    },
+    "checkpoint_hash": {
+      "type": "string"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "repetition": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "condition": {
+          "enum": [
+            "C0",
+            "C1",
+            "C2",
+            "C3"
+          ]
+        },
+        "setting": {
+          "enum": [
+            "natural",
+            "controlled"
+          ]
+        },
+        "models": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "string"
+            },
+            "B": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ]
+        },
+        "truth_changed": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string"
+        },
+        "a_initial_state_hash": {
+          "type": "string"
+        },
+        "public_initial_hash": {
+          "type": "string"
+        },
+        "b_initial_state_hash": {
+          "type": "string"
+        },
+        "runtime_ids": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "string"
+            },
+            "B": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      "required": [
+        "condition",
+        "setting",
+        "models",
+        "truth_changed",
+        "category",
+        "a_initial_state_hash",
+        "public_initial_hash",
+        "b_initial_state_hash",
+        "runtime_ids"
+      ]
+    },
+    "qualification": {
+      "type": "object",
+      "properties": {
+        "high_trust": {
+          "type": "boolean"
+        },
+        "retained_in_primary_analysis": {
+          "const": true
+        }
+      },
+      "required": [
+        "high_trust",
+        "retained_in_primary_analysis"
+      ]
+    },
+    "recognition": {
+      "type": "object",
+      "properties": {
+        "judgment": {
+          "enum": [
+            "SAME",
+            "CHANGED"
+          ]
+        },
+        "confidence": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "evidence": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "judgment",
+        "confidence",
+        "evidence"
+      ]
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "public": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10
+        },
+        "agents": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "object",
+              "properties": {
+                "private": {
+                  "type": "array"
+                },
+                "takeaways": {
+                  "type": "object"
+                },
+                "handoff": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "private",
+                "takeaways",
+                "handoff"
+              ]
+            },
+            "B": {
+              "type": "object",
+              "properties": {
+                "private": {
+                  "type": "array"
+                },
+                "takeaways": {
+                  "type": "object"
+                },
+                "handoff": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "private",
+                "takeaways",
+                "handoff"
+              ]
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ]
+        },
+        "rounds": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "$ref": "#/$defs/round"
+          }
+        }
+      },
+      "required": [
+        "public",
+        "agents",
+        "rounds"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "checkpoint_id",
+    "checkpoint_hash",
+    "branch_id",
+    "repetition",
+    "metadata",
+    "qualification",
+    "recognition",
+    "state"
+  ],
+  "$defs": {
+    "agent": {
+      "type": "object",
+      "properties": {
+        "stage1": {
+          "type": "object",
+          "properties": {
+            "intended_action": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "reasoning": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "intended_action",
+            "reasoning"
+          ]
+        },
+        "stage2": {
+          "type": "object",
+          "properties": {
+            "stated_action": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "message": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "stated_action",
+            "message"
+          ]
+        },
+        "stage3": {
+          "type": "object",
+          "properties": {
+            "choice": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "reasoning": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "choice",
+            "reasoning"
+          ]
+        },
+        "proposed_contribution": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "actual_contribution": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "imposed": {
+          "type": "boolean"
+        },
+        "commitment_breaking": {
+          "type": "boolean"
+        },
+        "proposed_commitment_breaking": {
+          "type": "boolean"
+        },
+        "promise_deception": {
+          "type": "boolean"
+        },
+        "judge": {
+          "type": "object",
+          "properties": {
+            "primary_label": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            }
+          },
+          "required": [
+            "primary_label",
+            "confidence"
+          ]
+        },
+        "reflection": {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "assessment": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "score",
+            "assessment"
+          ]
+        }
+      },
+      "required": [
+        "stage1",
+        "stage2",
+        "stage3",
+        "proposed_contribution",
+        "actual_contribution",
+        "imposed",
+        "commitment_breaking",
+        "proposed_commitment_breaking",
+        "promise_deception",
+        "judge",
+        "reflection"
+      ]
+    },
+    "round": {
+      "type": "object",
+      "properties": {
+        "round": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "agents": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "$ref": "#/$defs/agent"
+            },
+            "B": {
+              "$ref": "#/$defs/agent"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ]
+        },
+        "outcomes": {
+          "type": "object",
+          "properties": {
+            "choices": {
+              "type": "object",
+              "properties": {
+                "A": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 5
+                },
+                "B": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 5
+                }
+              },
+              "required": [
+                "A",
+                "B"
+              ]
+            },
+            "payoffs": {
+              "type": "object",
+              "properties": {
+                "A": {
+                  "type": "number"
+                },
+                "B": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "A",
+                "B"
+              ]
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "choices",
+            "payoffs",
+            "description"
+          ]
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "agent": {
+                "enum": [
+                  "A",
+                  "B"
+                ]
+              },
+              "stage": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "agent",
+              "stage"
+            ]
+          }
+        },
+        "controlled_policy_applied": {
+          "type": "boolean"
+        },
+        "a_decision_information": {
+          "type": "string"
+        },
+        "models": {
+          "type": "object",
+          "properties": {
+            "A": {
+              "type": "string"
+            },
+            "B": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "A",
+            "B"
+          ]
+        }
+      },
+      "required": [
+        "round",
+        "agents",
+        "outcomes",
+        "events",
+        "controlled_policy_applied",
+        "a_decision_information",
+        "models"
+      ]
+    }
+  }
+}
