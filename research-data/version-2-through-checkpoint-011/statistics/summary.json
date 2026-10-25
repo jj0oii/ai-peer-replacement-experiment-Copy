@@ -1,0 +1,26 @@
+{
+  "protocol_version": "publicgoods-peer-identity-v2",
+  "mock": false,
+  "batch_id": "batch_6a74e413f9fd4ecbaaaff12e71c1ef27",
+  "source_export": "/workspace/peer-identity-exports/study-200-v2/attempt_94d8e57d9dd44086a2ec8f98fc62ecac",
+  "independent_completed_checkpoints": 12,
+  "completed_continuations": 96,
+  "unstarted_or_incomplete_planned_trials": 104,
+  "contrasts": [
+    "C3-C2",
+    "C2-C1",
+    "C1-C0"
+  ],
+  "uncertainty_method": "95% pointwise bounded-mean Hoeffding intervals over checkpoint means; exact Clopper\u2013Pearson additionally for one binary recognition outcome per checkpoint within a condition/setting.",
+  "warning": "12 independent completed checkpoints. With small samples distribution-free intervals are broad, often the full feasible range. Equal/zero observed differences do not establish a null effect. No bootstrap round/trial pseudoreplication. No multiplicity-adjusted simultaneous claims. Mean ordinal ratings are descriptive, not equal-interval psychological measurements.",
+  "matching_rule": "Match repetitions within checkpoint/setting, then average differences within checkpoint. Incomplete pairs are not imputed.",
+  "forecast_rule": "Within-run next observed contribution; round-5 branch forecast scoring remains separately in source rounds.csv; no round-11 prediction.",
+  "script_sha256": "d2cd6fd4293ee592642c8b228ec5b6b3a8b4c552a126297257845763e190b0d8",
+  "input_sha256": {
+    "metadata.json": "9249c519251f896454665b5ee97d25c258421f3be501f69c3f1fdf3eb81c274f",
+    "rounds.csv": "37ffe7703bf97a0a8d0532b3863ca4d79f99519d09b47eebbc743d31f0e7e9a3",
+    "trials.csv": "3ceb394bdb5ae8af466191f428c88380a470c967d598492f2393dbdf296698a7",
+    "detections.csv": "6c515896b79f2c631bee867ba9b650f791556dc307bae3ee9b896225c9ccf112",
+    "checkpoints.csv": "386b9f14235fda0a24b6f5bee718ef0db4c9782c2267dd737c337088ae398519"
+  }
+}

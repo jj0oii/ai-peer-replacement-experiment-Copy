@@ -1,0 +1,15 @@
+{
+  "charts.py": "4ffea6f56748b41b2b32b95c547773bba3a874082b5abe5db1476a73cfca38cb",
+  "VERSION_2_METHODOLOGY.md": "bf9bf721c4dafbf9d7915d5b380b3db252d52e63b2b14b52a96a96630eaedd17",
+  "raw.jsonl.gz": "b611f12068f70a131ff603327abb7c8c550cb95870de30bedbd02ad2f165342e",
+  "DATA_DICTIONARY.md": "1dc104bb9dee2a8c4d13ceb705693afd33e90d658898395f194a7e76b496edbb",
+  "analyze.py": "319b4b5b86641095fb0c12a3e78c8492db5ac9d36cbe7e7e84dd5b1f64ef3098",
+  "validation.json": "5fa5799bd818cda6924b0bbe3ea90e74d6b3e9c7c81678964508fa434508dcce",
+  "metadata.json": "9249c519251f896454665b5ee97d25c258421f3be501f69c3f1fdf3eb81c274f",
+  "trials.csv": "3ceb394bdb5ae8af466191f428c88380a470c967d598492f2393dbdf296698a7",
+  "run_metrics.csv": "f56a1fa627a848703032db3cca6f55ab793958c493ed24a28b3053eb5b1d5c2a",
+  "checkpoints.csv": "386b9f14235fda0a24b6f5bee718ef0db4c9782c2267dd737c337088ae398519",
+  "REVIEW_README.md": "f7e2e59e759998f11c6a775eccc3e3802e2485e8bee8398947d22f36658d7c66",
+  "detections.csv": "6c515896b79f2c631bee867ba9b650f791556dc307bae3ee9b896225c9ccf112",
+  "rounds.csv": "37ffe7703bf97a0a8d0532b3863ca4d79f99519d09b47eebbc743d31f0e7e9a3"
+}

@@ -215,7 +215,8 @@ def recognize(state, journal, prefix, model, seed, config):
 
 def code_identity():
     # Refuse changed prompts/engine/transport on resume; budget limits can be raised explicitly.
-    files = [Path(v2.__file__), Path(__file__), Path(__file__).with_name('inference.py'), Path(__file__).with_name('provenance.py'), Path(__file__).with_name('spending.py'), Path(prompts.__file__),
+    from . import repair
+    files = [Path(repair.__file__), Path(v2.__file__), Path(__file__), Path(__file__).with_name('inference.py'), Path(__file__).with_name('provenance.py'), Path(__file__).with_name('spending.py'), Path(prompts.__file__),
              Path(__file__).parents[1] / 'src/games/publicgoods.py']
     return digest({str(p.relative_to(Path(__file__).parents[1])): p.read_text() for p in files})
 
@@ -229,7 +230,9 @@ def prepare_study(config, directory, mock):
     expected = {'schema_version': 1, 'config': asdict(config), 'mock': mock,
                 'code_hash': code_identity(), 'planned_requests': config.calls()}
     if manifest_path.exists() and json.loads(manifest_path.read_text()) != expected:
-        raise StopRun('Study manifest differs: use a new output directory')
+        from .repair import compatible_manifest
+        if not compatible_manifest(directory, expected):
+            raise StopRun('Study manifest differs: use a new output directory')
     if not manifest_path.exists():
         atomic_json(manifest_path, expected)
     return expected

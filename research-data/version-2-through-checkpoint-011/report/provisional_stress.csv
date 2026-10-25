@@ -1,0 +1,5 @@
+phase,model,remaining_planned_slots,full_output_usd
+checkpoint_establishment,gpt-4o-mini,520,2.496
+continuations,gpt-4o-mini,3744,17.9712
+continuations,gpt-4.1-mini,520,6.656
+judging,gpt-5-mini,1170,11.7

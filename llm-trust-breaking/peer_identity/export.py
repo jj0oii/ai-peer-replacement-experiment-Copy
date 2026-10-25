@@ -77,7 +77,7 @@ def sources(directory, include_requests=True):
     paths=[]
     for name in ['batch.json','manifest.json','source-snapshot.json','cost-plan.json','run-status.json','usage-summary.json','budget-policy.json']:
         if (directory/name).is_file():paths.append(directory/name)
-    for pattern in ['budget-history/*.json','windows/*-policy.json','attempts/*.json','requests/*.json','checkpoint-*/checkpoint.json',
+    for pattern in ['recoveries/*.json','software-corrections/*.json','budget-history/*.json','windows/*-policy.json','attempts/*.json','requests/*.json','checkpoint-*/checkpoint.json',
                     'checkpoint-*/establishment-progress.json','checkpoint-*/branch-order.json',
                     'checkpoint-*/*/result.json','checkpoint-*/*/progress.json']:
         paths.extend(directory.glob(pattern))
@@ -178,6 +178,8 @@ def build_datasets(directory, records, manifest, batch):
     branches={f'{s}-{c}-rep{r:03d}':(s,c,r) for s in config.settings for c in config.conditions for r in range(config.repetitions)}
     for path,record in records:
         if not path.startswith('requests/'):continue
+        from .repair import effective_request
+        record=effective_request(directory, record)
         required(record,['request_id_local','payload','payload_hash','status','reserved_usd','mock'],'request')
         rid=record['request_id_local']
         if rid in calls:raise ExportError('Duplicate local request ID')
@@ -591,6 +593,7 @@ def export_bundle(directory, destination=None, secrets=()):
             report=validate_datasets(tables,config,batch['batch_id'])
             metadata={'format_version':2,'batch':batch,'export_id':'export_'+uuid.uuid4().hex,'export_created_at':utc_now(),
                 'config':manifest['config'],'mock':manifest['mock'],'execution_code_hash':manifest['code_hash'],
+                'software_corrections':[load_json(p) for p in sorted((directory/'software-corrections').glob('*.json'))],
                 'execution_status':load_json(directory/'run-status.json') if (directory/'run-status.json').is_file() else None,
                 'spending_policy':load_json(directory/'budget-policy.json') if (directory/'budget-policy.json').is_file() else None,
                 'execution_commit_sha':batch['execution_git_commit'],

@@ -1,0 +1,9 @@
+scope,agent,phase,evaluable,exact,mae
+incremental_batch,A,establishment,20,20,0.0
+incremental_batch,A,continuation,160,106,0.35
+incremental_batch,B,establishment,20,20,0.0
+incremental_batch,B,continuation,160,151,0.05625
+cumulative_v2,A,establishment,48,44,0.10416666666666667
+cumulative_v2,A,continuation,384,266,0.3125
+cumulative_v2,B,establishment,48,43,0.10416666666666667
+cumulative_v2,B,continuation,384,360,0.0625

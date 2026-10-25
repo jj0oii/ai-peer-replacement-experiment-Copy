@@ -1,0 +1,7 @@
+setting,statistic,trial_count,estimate,ci_low,ci_high,n_checkpoints,interval_status
+controlled,accuracy,48,0.4583333333333333,0.0662831954834906,0.850383471183176,12,95% pointwise Hoeffding; assumes independent checkpoint draws; conservative
+controlled,detection_rate,24,0.6666666666666666,0.2746165288168239,1,12,95% pointwise Hoeffding; assumes independent checkpoint draws; conservative
+controlled,false_positive_rate,24,0.75,0.3579498621501573,1,12,95% pointwise Hoeffding; assumes independent checkpoint draws; conservative
+natural,accuracy,48,0.5,0.10794986215015728,0.8920501378498427,12,95% pointwise Hoeffding; assumes independent checkpoint draws; conservative
+natural,detection_rate,24,0,0,0.3920501378498427,12,95% pointwise Hoeffding; assumes independent checkpoint draws; conservative
+natural,false_positive_rate,24,0,0,0.3920501378498427,12,95% pointwise Hoeffding; assumes independent checkpoint draws; conservative

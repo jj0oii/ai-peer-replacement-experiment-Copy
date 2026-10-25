@@ -86,8 +86,10 @@ def validate(value, schema):
         if value < schema.get('minimum', float('-inf')) or value > schema.get('maximum', float('inf')):
             raise ValueError('Numeric output outside permitted bounds')
     elif kind == 'string':
-        if not isinstance(value, str) or not value.strip():
-            raise ValueError('Expected nonempty text')
+        if not isinstance(value, str):
+            raise ValueError('Expected text')
+        if len(value) < schema.get('minLength', 0):
+            raise ValueError('Text shorter than schema minimum')
         if len(value) > schema.get('maxLength', 100_000):
             raise ValueError('Text exceeds limit')
 
@@ -220,7 +222,8 @@ class Journal:
         self._accounted = 0.0
         self._completed = 0
         for p in self.path.glob('*.json'):
-            r = json.loads(p.read_text())
+            from .repair import effective_request
+            r = effective_request(Path(directory), json.loads(p.read_text()))
             self._accounting[p.name] = (r.get('cost_usd', r['reserved_usd']), r['status'])
             self._accounted += self._accounting[p.name][0]
             self._completed += r['status'] == 'complete'
@@ -252,7 +255,8 @@ class Journal:
         self._accounting[path.name] = (accounted, record['status'])
 
     def records(self):
-        return [json.loads(p.read_text()) for p in sorted(self.path.glob('*.json'))]
+        from .repair import effective_request
+        return [effective_request(self.path.parent, json.loads(p.read_text())) for p in sorted(self.path.glob('*.json'))]
 
     def totals(self):
         return {'requests': len(self._accounting), 'accounted_usd': max(0.0, self._accounted),
@@ -292,7 +296,8 @@ class Journal:
         path = self.path / (digest(request_id) + '.json')
         fingerprint = digest(payload)
         if path.exists():
-            previous = json.loads(path.read_text())
+            from .repair import effective_request
+            previous = effective_request(self.path.parent, json.loads(path.read_text()))
             if previous['payload_hash'] != fingerprint:
                 raise StopRun('Resume payload mismatch: refusing changed or duplicate inference')
             if previous['status'] != 'complete':

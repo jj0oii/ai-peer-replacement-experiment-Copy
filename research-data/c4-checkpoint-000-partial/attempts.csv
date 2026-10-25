@@ -1,0 +1,17 @@
+request_id,stage,status,model,provider,input_tokens,output_tokens,known_cost_usd,accounted_usd
+probe/schema-4,probe,complete,google/gemini-2.5-flash-lite,Google AI Studio,2660,95,0.000304,0.000304
+checkpoint-000/natural-C4-rep000/r6/decision/B,trial,complete,google/gemini-2.5-flash-lite,Google AI Studio,1681,333,0.0003013,0.0003013
+checkpoint-000/natural-C4-rep000/r6/reflection/B,trial,blocked,google/gemini-2.5-flash-lite,,,,,0.0019319
+checkpoint-000/natural-C4-rep000/r6/judge/A,trial,complete,gpt-5-mini,,969,218,0.00067825,0.00067825
+checkpoint-000/natural-C4-rep000/r6/reflection/A,trial,complete,gpt-4o-mini,,3916,184,0.0006977999999999999,0.0006977999999999999
+checkpoint-000/natural-C4-rep000/r6/planning/B,trial,blocked,google/gemini-2.5-flash-lite,,,,,0.0016768000000000002
+probe/schema-3,probe,complete,google/gemini-2.5-flash-lite,Google AI Studio,1848,142,0.0002416,0.0002416
+probe/schema-2,probe,complete,google/gemini-2.5-flash-lite,Google AI Studio,1480,132,0.0002008,0.0002008
+probe/schema-1,probe,complete,google/gemini-2.5-flash-lite,Google AI Studio,1447,88,0.0001799,0.0001799
+checkpoint-000/natural-C4-rep000/r6/decision/A,trial,complete,gpt-4o-mini,,3579,125,0.00038145,0.00038145
+checkpoint-000/natural-C4-rep000/r6/judge/B,trial,complete,gpt-5-mini,,1148,91,0.000469,0.000469
+checkpoint-000/natural-C4-rep000/r6/announcement/A,trial,complete,gpt-4o-mini,,3438,83,0.0005654999999999999,0.0005654999999999999
+checkpoint-000/natural-C4-rep000/r6/announcement/B,trial,complete,google/gemini-2.5-flash-lite,Google AI Studio,1506,96,0.000189,0.000189
+checkpoint-000/natural-C4-rep000/r6/planning/A,trial,complete,gpt-4o-mini,,3529,90,0.0005833500000000001,0.0005833500000000001
+probe/schema-0,probe,complete,google/gemini-2.5-flash-lite,Google AI Studio,1541,84,0.0001877,0.0001877
+checkpoint-000/natural-C4-rep000/r6/planning/B/explicit-recovery-1,trial,complete,google/gemini-2.5-flash-lite,Google AI Studio,1541,84,0.0001877,0.0001877

@@ -39,3 +39,17 @@ The included starter modules and `util` dependency originate from
 [poseidon-research/collusion_hackathon](https://github.com/poseidon-research/collusion_hackathon),
 commit `d585a7b3be50366cc2bdf5789bf8add5890b2abd`. The existing starter README is
 retained inside `llm-trust-breaking`; Version 2 instructions take precedence for this study.
+
+## Current code and real research data
+
+The `experiment-3-3-v2-review` branch contains the latest local implementation,
+validator repair, checkpoint-level statistics, and isolated C4 routing/recovery tools.
+See [shared datasets and analysis instructions](research-data/README.md).
+
+The original Version 2 snapshot has **96 completed trials across 12 checkpoints**.
+The separate Gemini C4 smoke trial is **incomplete**, stopped on HTTP 429 during
+round-6 reflection; it has no final recognition outcome. No additional paid
+execution starts automatically. Publishing these files does not authorize retries.
+
+For C4 audit and execution gates, read
+[C4 recovery documentation](llm-trust-breaking/peer_identity/C4_EXPLICIT_RECOVERY.md).
