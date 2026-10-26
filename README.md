@@ -53,3 +53,5 @@ execution starts automatically. Publishing these files does not authorize retrie
 
 For C4 audit and execution gates, read
 [C4 recovery documentation](llm-trust-breaking/peer_identity/C4_EXPLICIT_RECOVERY.md).
+
+- [Prompts used in Version 2: readable guide and exact recorded examples](llm-trust-breaking/peer_identity/PROMPTS_USED_V2.md).
